@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b0a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MICROFIT">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>MICROFIT · Calisthenics</title>
+<style>
+:root{color-scheme:dark;--bg:#090b0a;--panel:#141815;--panel2:#1c231e;--line:#29332c;--lime:#b7f34a;--muted:#9aa59b;--white:#f5f7f3;--red:#ff8179}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#243322 0%,var(--bg) 48%);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100svh;padding:env(safe-area-inset-top) 16px calc(22px + env(safe-area-inset-bottom));}
+.app{max-width:520px;margin:0 auto}.top{display:flex;align-items:center;justify-content:space-between;padding:16px 2px 22px}.brand{font-weight:900;letter-spacing:.13em;font-size:18px}.brand span{color:var(--lime)}.tag{font-size:10px;color:var(--muted);letter-spacing:.12em}
+.hero{background:linear-gradient(140deg,#1d2b1b,#121713 68%);border:1px solid #34422f;border-radius:24px;padding:22px;margin-bottom:18px;position:relative;overflow:hidden}.eyebrow{font-size:11px;color:var(--lime);font-weight:800;letter-spacing:.13em}.hero h1{font-size:30px;line-height:1.04;margin:10px 0}.hero p{color:#c1c9bf;font-size:13px;line-height:1.5;margin:0;max-width:290px}.hero-mark{position:absolute;right:14px;bottom:12px;font-size:64px;opacity:.16}
+.section{font-size:13px;font-weight:800;margin:20px 2px 10px}.muted{color:var(--muted)}.choices{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.choice,.focus,.variant,.btn{border:1px solid var(--line);background:var(--panel);color:var(--white);border-radius:14px;padding:12px 8px;font:inherit;cursor:pointer}.choice{font-weight:800}.choice small{display:block;color:var(--muted);font-size:10px;font-weight:500;margin-top:4px}.choice.active,.focus.active,.variant.active{border-color:var(--lime);background:#202b19;box-shadow:inset 0 0 0 1px #789f34}.focuses{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.focus{font-size:12px;font-weight:700;padding:13px 4px}.level{display:flex;justify-content:space-between;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px;margin-top:12px;font-size:12px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:15px;margin-top:16px}.plan-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.pill{font-size:10px;color:var(--lime);background:#28351e;border-radius:20px;padding:6px 9px}.exercise{display:flex;gap:11px;align-items:center;padding:10px 0;border-top:1px solid #242c26}.num{width:28px;height:28px;border-radius:9px;background:var(--panel2);display:grid;place-items:center;color:var(--lime);font-size:12px;font-weight:800;flex-shrink:0}.exname{font-size:13px;font-weight:750}.exmeta{font-size:11px;color:var(--muted);margin-top:3px}.exright{margin-left:auto;color:var(--muted);font-size:11px}
+.btn{width:100%;border:0;background:var(--lime);color:#10150b;font-weight:900;padding:16px;border-radius:16px;margin-top:14px;font-size:14px}.btn:active{transform:scale(.99)}.btn.secondary{background:#242d26;color:var(--white);border:1px solid var(--line)}.btn.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.hidden{display:none!important}.trainer{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:20px;text-align:center;margin-top:15px}.trainer .status{font-size:11px;letter-spacing:.13em;color:var(--lime);font-weight:800}.trainer h2{font-size:25px;margin:13px 0 4px}.timer{font-size:72px;line-height:1;font-weight:850;letter-spacing:-.06em;font-variant-numeric:tabular-nums;margin:24px 0 10px}.timer.rest{color:var(--lime)}.track{height:7px;background:#29312b;border-radius:10px;overflow:hidden;margin:18px 0}.track div{height:100%;width:0;background:var(--lime);transition:width .2s}.trainer .hint{font-size:12px;color:var(--muted);line-height:1.5;min-height:36px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:9px}.controls .btn{margin-top:8px}.variantbox{margin-top:14px;text-align:left}.variantbox h3{font-size:12px;margin:0 0 8px}.variants{display:flex;gap:7px}.variant{flex:1;padding:10px 5px;font-size:11px}.summary{text-align:center;padding:24px 10px}.summary .medal{font-size:48px}.summary h2{font-size:27px;margin:8px}.summary p{color:var(--muted);font-size:13px;line-height:1.5}.stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:14px}.stat b{display:block;color:var(--lime);font-size:23px}.stat span{font-size:10px;color:var(--muted)}.foot{text-align:center;color:#657066;font-size:10px;line-height:1.5;margin:20px 10px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top"><div class="brand">MICRO<span>FIT</span></div><div class="tag">CALISTHENICS · ANYTIME</div></header>
+  <main id="home">
+    <section class="hero"><div class="eyebrow">DEIN KÖRPER. DEINE ZEIT.</div><h1>Kleine Einheit.<br>Starker Impuls.</h1><p>Wähle deine verfügbare Zeit. Wir schlagen dir ein kurzes Körpergewicht-Workout vor.</p><div class="hero-mark">✳</div></section>
+    <div class="section">Wie viel Zeit hast du?</div>
+    <div class="choices" id="durations">
+      <button class="choice" data-min="3">3 <small>Minuten</small></button><button class="choice active" data-min="5">5 <small>Minuten</small></button><button class="choice" data-min="8">8 <small>Minuten</small></button><button class="choice" data-min="12">12 <small>Minuten</small></button>
+    </div>
+    <div class="section">Worauf hast du heute Lust?</div>
+    <div class="focuses" id="focuses"><button class="focus active" data-focus="all">Ganzkörper</button><button class="focus" data-focus="strength">Kraft</button><button class="focus" data-focus="mobility">Mobility</button></div>
+    <div class="level"><span>DEIN NIVEAU</span><strong style="color:var(--lime)">Einsteiger</strong></div>
+    <section class="plan"><div class="plan-head"><strong>Dein Workout</strong><span class="pill" id="planMeta">5 MIN · 5 ÜBUNGEN</span></div><div id="planList"></div></section>
+    <button class="btn" id="startBtn">Workout starten&nbsp; →</button>
+    <div class="foot">Ohne Geräte · Nur Körpergewicht · In deinem Tempo</div>
+  </main>
+  <main id="training" class="hidden">
+    <div class="section" id="sessionLabel">DEIN WORKOUT</div>
+    <section class="trainer">
+      <div class="status" id="phase">BEREIT?</div><h2 id="exerciseName">Kniebeugen</h2>
+      <div class="timer" id="clock">00:40</div><div class="hint" id="exerciseHint">Kontrolliert absenken, Knie zeigen in Richtung der Zehen.</div>
+      <div class="track"><div id="progress"></div></div>
+      <div class="muted" style="font-size:11px" id="counter">ÜBUNG 1 VON 5</div>
+      <div class="controls"><button class="btn secondary" id="pauseBtn">Pause</button><button class="btn secondary" id="skipBtn">Überspringen</button></div>
+      <div class="variantbox"><h3>ÜBUNGSVARIANTE</h3><div class="variants" id="variants"></div></div>
+    </section>
+    <button class="btn ghost" id="quitBtn">Training beenden</button>
+  </main>
+  <main id="complete" class="hidden">
+    <section class="summary"><div class="medal">🏆</div><div class="eyebrow">EIN STARKER SCHRITT</div><h2>Workout geschafft!</h2><p>Du hast dir Zeit für Bewegung genommen. Jede Einheit zählt – bleib dran, ohne dich unter Druck zu setzen.</p></section>
+    <div class="stats"><div class="stat"><b id="doneMinutes">5</b><span>GEPLANTE MINUTEN</span></div><div class="stat"><b id="doneCount">1</b><span>ABGESCHLOSSENE WORKOUTS</span></div></div>
+    <button class="btn" id="againBtn">Zurück zum Start</button>
+  </main>
+</div>
+<script>
+const catalog={
+ all:[
+  {name:"Kniebeugen",time:40,hint:"Hüfte nach hinten, Brust aufrecht, kontrolliert aufstehen.",variants:["Stuhl-Squat","Kniebeuge","Tempo-Squat"]},
+  {name:"Liegestütze",time:40,hint:"Körper in einer Linie halten. Ellbogen schräg nach hinten führen.",variants:["Wand-Push-up","Erhöht","Klassisch"]},
+  {name:"Glute Bridge",time:40,hint:"Becken anheben, Gesäß anspannen und kontrolliert absenken.",variants:["Kurzer Bewegungsweg","Glute Bridge","Einbeinig*"]},
+  {name:"Plank",time:40,hint:"Bauch anspannen, Rücken neutral halten und ruhig atmen.",variants:["Knie-Plank","Unterarm-Plank","Langer Hebel*"]},
+  {name:"Bird Dog",time:40,hint:"Gegenüberliegenden Arm und Fuß strecken, Becken ruhig halten.",variants:["Nur Beine","Bird Dog","Mit Pause"]}
+ ],
+ strength:[
+  {name:"Kniebeugen",time:40,hint:"Kontrolliert und gleichmäßig bewegen.",variants:["Stuhl-Squat","Kniebeuge","Tempo-Squat"]},
+  {name:"Liegestütze",time:40,hint:"Spannung im Rumpf halten.",variants:["Wand-Push-up","Erhöht","Klassisch"]},
+  {name:"Ausfallschritte",time:40,hint:"Kleinen Schritt machen und stabil absenken.",variants:["Statischer Split Squat","Reverse Lunge","Ausfallschritt"]},
+  {name:"Pike Push-up",time:40,hint:"Hüfte hoch, Kopf kontrolliert Richtung Boden führen.",variants:["Schulter-Tap","Erhöht","Pike Push-up"]},
+  {name:"Dead Bug",time:40,hint:"Lendenwirbelsäule sanft am Boden halten.",variants:["Nur Beine","Dead Bug","Langsam mit Pause"]}
+ ],
+ mobility:[
+  {name:"Cat-Cow",time:45,hint:"Wirbelsäule langsam runden und sanft strecken.",variants:["Kleiner Bewegungsweg","Cat-Cow","Mit Atemrhythmus"]},
+  {name:"Deep Squat Hold",time:45,hint:"Nur so tief gehen, wie es angenehm und kontrolliert möglich ist.",variants:["Mit Halt","Freier Squat Hold","Sanftes Verlagern"]},
+  {name:"Thorax-Rotation",time:45,hint:"Brustwirbelsäule drehen, Becken möglichst ruhig halten.",variants:["Kleine Rotation","Vierfüßler-Rotation","Seitlage-Rotation"]},
+  {name:"Hüftmobilisation",time:45,hint:"Langsame, schmerzfreie Kreise und Gewichtsverlagerungen.",variants:["Kleine Kreise","90/90 Wechsel","Ausfallschritt-Mobilität"]},
+  {name:"Child's Pose",time:45,hint:"Ruhig atmen und nur angenehme Dehnung zulassen.",variants:["Kissen unterlegen","Child's Pose","Seitlich ausstrecken"]}
+ ]};
+let minutes=5,focus="all",items=[],index=0,remaining=40,interval=null,running=false,resting=false,paused=false,chosen={},secondsElapsed=0;
+const $=id=>document.getElementById(id);
+function getItems(){let source=[...catalog[focus]];let n=minutes===3?3:minutes===5?5:minutes===8?8:10;let out=[];for(let i=0;i<n;i++){let e=source[i%source.length];out.push({...e,name:e.name,baseIndex:i%source.length})}return out}
+function renderPlan(){items=getItems();$("planMeta").textContent=`${minutes} MIN · ${items.length} ÜBUNGEN`;$("planList").innerHTML=items.map((e,i)=>`<div class="exercise"><div class="num">${i+1}</div><div><div class="exname">${e.name}</div><div class="exmeta">${e.time} Sek. Belastung · Körpergewicht</div></div><div class="exright">Einsteiger</div></div>`).join("")}
+document.querySelectorAll(".choice").forEach(b=>b.addEventListener("click",()=>{minutes=+b.dataset.min;document.querySelectorAll(".choice").forEach(x=>x.classList.toggle("active",x===b));renderPlan()}));
+document.querySelectorAll(".focus").forEach(b=>b.addEventListener("click",()=>{focus=b.dataset.focus;document.querySelectorAll(".focus").forEach(x=>x.classList.toggle("active",x===b));renderPlan()}));
+function show(which){["home","training","complete"].forEach(id=>$(id).classList.toggle("hidden",id!==which))}
+function drawExercise(){let e=items[index];resting=false;remaining=e.time;$("phase").textContent="WERKPHASE";$("exerciseName").textContent=e.name;$("clock").textContent=fmt(remaining);$("clock").classList.remove("rest");$("exerciseHint").textContent=e.hint;$("counter").textContent=`ÜBUNG ${index+1} VON ${items.length}`;$("progress").style.width=`${index/items.length*100}%`;$("variants").innerHTML=e.variants.map((v,i)=>`<button class="variant ${i===1?"active":""}" data-variant="${i}">${v}</button>`).join("");$("variants").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{chosen[index]=b.dataset.variant;$("variants").querySelectorAll("button").forEach(x=>x.classList.toggle("active",x===b))}));}
+function fmt(s){return `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`}
+function start(){items=getItems();index=0;chosen={};secondsElapsed=0;drawExercise();$("sessionLabel").textContent=`${minutes} MINUTEN · ${focus==="all"?"GANZKÖRPER":focus==="strength"?"KRAFT":"MOBILITY"}`;show("training");run()}
+function run(){clearInterval(interval);running=true;paused=false;$("pauseBtn").textContent="Pause";interval=setInterval(tick,1000)}
+function tick(){if(!running||paused)return;remaining--;secondsElapsed++;$("clock").textContent=fmt(remaining);if(remaining<=0){if(resting){index++;if(index>=items.length){finish();return}drawExercise()}else if(index<items.length-1){resting=true;remaining=15;$("phase").textContent="PAUSE";$("exerciseName").textContent="Kurz erholen";$("clock").textContent=fmt(remaining);$("clock").classList.add("rest");$("exerciseHint").textContent="Locker atmen, ausschütteln und für die nächste Übung bereit machen.";$("counter").textContent=`ALS NÄCHSTES: ${items[index+1].name}`;$("variants").innerHTML="";$("progress").style.width=`${(index+1)/items.length*100}%`}else{finish()}}}
+function finish(){clearInterval(interval);running=false;localStorage.setItem("microfit_done",String((+localStorage.getItem("microfit_done")||0)+1));localStorage.setItem("microfit_minutes",String((+localStorage.getItem("microfit_minutes")||0)+minutes));$("doneMinutes").textContent=minutes;$("doneCount").textContent=localStorage.getItem("microfit_done");show("complete")}
+$("startBtn").addEventListener("click",start);$("pauseBtn").addEventListener("click",()=>{paused=!paused;$("pauseBtn").textContent=paused?"Weiter":"Pause"});$("skipBtn").addEventListener("click",()=>{if(resting){index++;if(index>=items.length){finish();return}}else if(index<items.length-1){resting=true;remaining=0;tick();return}else{finish();return}drawExercise()});$("quitBtn").addEventListener("click",()=>{clearInterval(interval);running=false;show("home")});$("againBtn").addEventListener("click",()=>{show("home");renderPlan()});
+renderPlan();
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))navigator.serviceWorker.register("./sw.js").catch(()=>{});
+</script>
+</body></html>
